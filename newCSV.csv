@@ -1,0 +1,103 @@
+# 3.31-full on Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz
+0.229805754,C0,Bad_Speculation,18.72,% Slots,,,,3.18,
+0.229805754,C0,Bad_Speculation.Machine_Clears,18.72,% Slots,This metric represents slots fraction the CPU has wasted due to Machine Clears...,machine_clears.count,,0.0,
+0.229805754,C0-T0,Frontend_Bound.Frontend_Latency.Branch_Resteers,0.00,% Clocks_Calculated,This metric represents cycles fraction the CPU was stalled due to Branch Resteers...,br_misp_retired.all_branches,,0.0,
+0.229805754,C1,Frontend_Bound,33.74,% Slots,,,,3.18,
+0.229805754,C1,Retiring,20.63,% Slots,,,,3.18,
+0.229805754,C1,Frontend_Bound.Frontend_Latency,46.43,% Slots,This metric represents slots fraction the CPU was stalled due to Frontend latency issues...,rs_events.empty_end,,3.18,
+0.229805754,C1,Retiring.Microcode_Sequencer,9.62,% Slots,This metric represents slots fraction the CPU was retiring uops fetched by the Microcode Sequencer (MS) unit...,idq.ms_uops,,2.36,
+0.229805754,C1-T0,Frontend_Bound.Frontend_Latency.MS_Switches,0.00,% Clocks,This metric estimates the fraction of cycles when the CPU was stalled due to switches of uop delivery to the Microcode Sequencer (MS)...,idq.ms_switches,,0.0,
+0.229805754,C0-T1,Frontend_Bound.Frontend_Latency.Branch_Resteers,0.00,% Clocks_Calculated,,br_misp_retired.all_branches,,0.0,
+0.229805754,C1-T1,Frontend_Bound.Frontend_Latency.MS_Switches,0.00,% Clocks,,idq.ms_switches,,0.0,
+0.348740273,C1,Retiring,35.40,% Slots,,,,0.0,
+0.348740273,C1,Retiring.Microcode_Sequencer,5.12,% Slots,,idq.ms_uops,,0.83,
+0.348740273,C1-T0,Frontend_Bound.Frontend_Latency.MS_Switches,6.02,% Clocks,,idq.ms_switches,,3.36,
+0.348740273,C1-T1,Frontend_Bound.Frontend_Latency.MS_Switches,0.81,% Clocks,,idq.ms_switches,,3.36,
+0.599122516,C0,Bad_Speculation,13.64,% Slots,,,,3.25,
+0.599122516,C0,Bad_Speculation.Branch_Mispredicts,13.54,% Slots,This metric represents slots fraction the CPU has wasted due to Branch Misprediction...,br_misp_retired.all_branches,,3.25,
+0.599122516,C0-T0,Frontend_Bound.Frontend_Latency.Branch_Resteers,0.00,% Clocks_Calculated,,br_misp_retired.all_branches,,0.0,
+0.599122516,C0-T1,Frontend_Bound.Frontend_Latency.Branch_Resteers,0.00,% Clocks_Calculated,,br_misp_retired.all_branches,,0.0,
+0.957079899,C0,Retiring,75.51,% Slots,,,,3.38,
+0.957079899,C0,Retiring.Base,74.95,% Slots,This metric represents slots fraction where the CPU was retiring regular uops (ones not originated from the microcode-sequencer)...,inst_retired.prec_dist:pp,,3.38,
+0.957079899,C0-T0,Retiring.Base.Other,100.00,% Uops,This metric represents non-floating-point (FP) uop fraction the CPU has executed...,,,3.38,<==
+0.957079899,C0-T0,MUX,3.38,%,PerfMon Event Multiplexing accuracy indicator,,,,
+0.957079899,C1,Frontend_Bound,29.43,% Slots,,,,3.38,
+0.957079899,C1,Frontend_Bound.Frontend_Bandwidth,13.34,% Slots,,,,3.38,
+0.957079899,C1,Frontend_Bound.Frontend_Bandwidth.MITE,15.96,% CoreClocks,This metric represents Core cycles fraction in which CPU was likely limited due to the MITE pipeline (Legacy Decode Pipeline)...,,,3.37,<==
+0.957079899,C1-T0,MUX,3.37,%,,,,,
+0.957079899,C0-T1,Retiring.Base.Other,99.87,% Uops,,,,3.38,<==
+0.957079899,C0-T1,MUX,3.38,%,,,,,
+0.957079899,C1-T1,MUX,3.37,%,,,,,
+1.197011455,C0,Retiring,74.72,% Slots,,,,3.32,
+1.197011455,C0,Retiring.Base,74.15,% Slots,,inst_retired.prec_dist:pp,,3.33,
+1.197011455,C0-T0,Retiring.Base.Other,100.00,% Uops,,,,0.0,<==
+1.197011455,C1,Frontend_Bound,58.94,% Slots,,,,3.33,
+1.197011455,C1,Retiring,14.79,% Slots,,,,3.33,
+1.197011455,C1,Retiring.Microcode_Sequencer,1.86,% Slots,,idq.ms_uops,,3.33,
+1.197011455,C1-T0,Frontend_Bound.Frontend_Latency.ICache_Misses,14.00,% Clocks,This metric represents cycles fraction the CPU was stalled due to instruction cache misses...,,,1.82,<==
+1.197011455,C1-T0,Frontend_Bound.Frontend_Latency.MS_Switches,5.99,% Clocks,,idq.ms_switches,,1.84,
+1.197011455,C0-T1,Retiring.Base.Other,100.00,% Uops,,,,0.0,<==
+1.197011455,C1-T1,Frontend_Bound.Frontend_Latency.ICache_Misses,10.31,% Clocks,,,,1.83,
+1.197011455,C1-T1,Frontend_Bound.Frontend_Latency.MS_Switches,6.13,% Clocks,,idq.ms_switches,,1.84,
+1.560126741,C0,Retiring,70.51,% Slots,,,,3.32,
+1.560126741,C0,Retiring.Base,69.61,% Slots,,inst_retired.prec_dist:pp,,3.32,
+1.560126741,C0-T0,Retiring.Base.Other,100.00,% Uops,,,,3.32,<==
+1.560126741,C1,Frontend_Bound,58.36,% Slots,,,,3.33,
+1.560126741,C1,Bad_Speculation,6.19,% Slots,This category represents slots fraction wasted due to incorrect speculations...,,,3.33,
+1.560126741,C1,Retiring,11.61,% Slots,,,,3.33,
+1.560126741,C1,Frontend_Bound.Frontend_Latency,43.45,% Slots,,rs_events.empty_end,,3.32,
+1.560126741,C1,Retiring.Microcode_Sequencer,4.48,% Slots,,idq.ms_uops,,3.3,
+1.560126741,C1-T0,Frontend_Bound.Frontend_Latency.Branch_Resteers,6.81,% Clocks_Calculated,,br_misp_retired.all_branches,,1.24,
+1.560126741,C1-T0,Frontend_Bound.Frontend_Latency.MS_Switches,31.00,% Clocks,,idq.ms_switches,,3.31,<==
+1.560126741,C0-T1,Retiring.Base.Other,100.00,% Uops,,,,3.32,<==
+1.560126741,C1-T1,Frontend_Bound.Frontend_Latency.ICache_Misses,16.75,% Clocks,,,,3.31,<==
+1.803232164,C1,Frontend_Bound,45.59,% Slots,,,,3.22,
+1.803232164,C1,Frontend_Bound.Frontend_Latency,36.67,% Slots,,rs_events.empty_end,,0.3,<==
+1.927011122,C0,Frontend_Bound.Frontend_Bandwidth,12.46,% Slots,This metric represents slots fraction the CPU was stalled due to Frontend bandwidth issues...,,,2.89,
+1.927011122,C1,Frontend_Bound.Frontend_Bandwidth,12.55,% Slots,,,,2.9,
+1.927011122,C1,Retiring.Microcode_Sequencer,8.52,% Slots,,idq.ms_uops,,3.23,
+1.927011122,C1,Frontend_Bound.Frontend_Bandwidth.MITE,18.37,% CoreClocks,,,,3.23,
+1.927011122,C1,Retiring,16.08,% Slots,This category represents slots fraction utilized by useful work i...,,,0.0,
+1.927011122,C1-T0,Frontend_Bound.Frontend_Latency.MS_Switches,0.74,% Clocks,,idq.ms_switches,,3.23,
+1.927011122,C1-T1,Frontend_Bound.Frontend_Latency.MS_Switches,5.04,% Clocks,,idq.ms_switches,,3.23,
+2.179079759,C1,Frontend_Bound,57.76,% Slots,,,,2.98,
+2.179079759,C1,Frontend_Bound.Frontend_Bandwidth,12.15,% Slots,,,,2.98,<==
+2.557234477,C0,Frontend_Bound,27.73,% Slots,,,,3.04,
+2.557234477,C0,Frontend_Bound.Frontend_Bandwidth,10.04,% Slots,,,,3.04,<==
+2.557234477,C0-T0,MUX,3.04,%,,,,,
+2.557234477,C1,Frontend_Bound,45.28,% Slots,,,,3.04,
+2.557234477,C1,Frontend_Bound.Frontend_Latency,21.75,% Slots,,rs_events.empty_end,,3.04,
+2.557234477,C1-T0,Frontend_Bound.Frontend_Latency.ICache_Misses,17.77,% Clocks,,,,3.04,<==
+2.557234477,C1-T0,MUX,3.04,%,,,,,
+2.557234477,C0-T1,MUX,3.04,%,,,,,
+2.557234477,C1-T1,Frontend_Bound.Frontend_Latency.ICache_Misses,10.00,% Clocks,,,,3.04,
+2.557234477,C1-T1,Frontend_Bound.Frontend_Latency.ITLB_Misses,5.35,% Clocks,This metric represents cycles fraction the CPU was stalled due to instruction TLB misses...,itlb_misses.walk_completed,,3.04,
+2.557234477,C1-T1,Frontend_Bound.Frontend_Latency.Branch_Resteers,12.69,% Clocks_Calculated,,br_misp_retired.all_branches,,3.04,
+2.557234477,C1-T1,MUX,3.04,%,,,,,
+2.804110764,C0,Retiring,71.83,% Slots,,,,3.13,
+2.804110764,C0,Retiring.Base,71.48,% Slots,,inst_retired.prec_dist:pp,,3.14,
+2.804110764,C0-T0,Retiring.Base.Other,100.00,% Uops,,,,0.0,<==
+2.804110764,C1,Frontend_Bound,44.18,% Slots,,,,3.13,
+2.804110764,C1,Retiring,20.33,% Slots,,,,3.13,
+2.804110764,C1,Retiring.Microcode_Sequencer,1.60,% Slots,,idq.ms_uops,,3.12,
+2.804110764,C1-T0,Frontend_Bound.Frontend_Latency.MS_Switches,26.75,% Clocks,,idq.ms_switches,,3.14,<==
+2.804110764,C0-T1,Retiring.Base.Other,99.88,% Uops,,,,0.0,<==
+2.804110764,C1-T1,Frontend_Bound.Frontend_Latency.ICache_Misses,17.17,% Clocks,,,,3.14,<==
+2.804110764,C1-T1,Frontend_Bound.Frontend_Latency.ITLB_Misses,6.16,% Clocks,,itlb_misses.walk_completed,,3.14,
+3.174899427,C0,Retiring,84.43,% Slots,,,,3.37,
+3.174899427,C0,Retiring.Base,83.85,% Slots,,inst_retired.prec_dist:pp,,3.37,
+3.174899427,C0-T0,Retiring.Base.FP_Arith,34.29,% Uops,This metric represents overall arithmetic floating-point (FP) uops fraction the CPU has executed (retired),,,3.37,
+3.174899427,C0-T0,Retiring.Base.Other,65.71,% Uops,,,,3.37,<==
+3.174899427,C0-T0,MUX,3.37,%,,,,,
+3.174899427,C1,Frontend_Bound,29.42,% Slots,,,,3.37,
+3.174899427,C1,Frontend_Bound.Frontend_Bandwidth,13.26,% Slots,,,,3.37,
+3.174899427,C1,Frontend_Bound.Frontend_Bandwidth.MITE,22.39,% CoreClocks,,,,3.37,<==
+3.174899427,C1-T0,MUX,3.36,%,,,,,
+3.174899427,C0-T1,Retiring.Base.Other,99.53,% Uops,,,,3.37,<==
+3.174899427,C0-T1,MUX,3.37,%,,,,,
+3.174899427,C1-T1,MUX,3.36,%,,,,,
+3.438854523,C0,Bad_Speculation,22.56,% Slots,,,,2.95,
+3.438854523,C0,Bad_Speculation.Branch_Mispredicts,22.48,% Slots,,br_misp_retired.all_branches,,2.95,<==
+3.438854523,C0-T0,Frontend_Bound.Frontend_Latency.Branch_Resteers,0.00,% Clocks_Calculated,,br_misp_retired.all_branches,,0.0,
+3.438854523,C1,Frontend_Bound,31.31,% Slots,,,,2.95,
+3.438854523,C0-T1,Frontend_Bound.Frontend_Latency.Branch_Resteers,0.00,% Clocks_Calculated,,br_misp_retired.all_branches,,0.0,

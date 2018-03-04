@@ -1,0 +1,16 @@
+# started on Sun Mar  4 02:22:09 2018
+
+
+ Performance counter stats for 'python find_faces_in_picture_cnn.py':
+
+     156867.292817      task-clock (msec)         #    1.003 CPUs utilized          
+             3,806      context-switches          #    0.024 K/sec                  
+               232      cpu-migrations            #    0.001 K/sec                  
+         6,230,985      page-faults               #    0.040 M/sec                  
+   486,148,625,504      cycles                    #    3.099 GHz                    
+ 1,009,955,238,401      instructions              #    2.08  insn per cycle         
+   172,273,820,715      branches                  # 1098.214 M/sec                  
+       419,508,529      branch-misses             #    0.24% of all branches        
+
+     156.474995482 seconds time elapsed
+
