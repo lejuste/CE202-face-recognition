@@ -1,0 +1,14 @@
+
+ Performance counter stats for 'python runThreads.py -t 4 --program python throughPutRun.py -t 4 -s 64':
+
+      18953.191079      task-clock (msec)         #    3.507 CPUs utilized          
+           174,174      context-switches          #    0.009 M/sec                  
+                39      cpu-migrations            #    0.002 K/sec                  
+           180,459      page-faults               #    0.010 M/sec                  
+    41,651,365,352      cycles                    #    2.198 GHz                    
+    50,221,337,690      instructions              #    1.21  insn per cycle         
+     8,403,035,586      branches                  #  443.357 M/sec                  
+        81,697,904      branch-misses             #    0.97% of all branches        
+
+       5.403837395 seconds time elapsed
+
