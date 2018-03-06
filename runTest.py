@@ -14,93 +14,93 @@ tests = int(options.test)
 
 #1 Thread
 print('RUNNING 1 THREAD ON X')
-os.system('toplev.py --all --quiet --output thread_1_size_1.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 1"')
-print('CHECKING STATS ON IPC')
+#os.system('toplev.py --all --quiet --output thread_1_size_1.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 1"')
+#print('CHECKING STATS ON IPC')
 os.system('3>thread_1_size_1_IPC.txt perf stat --log-fd 3 python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 1"')
 
 
 print('RUNNING 1 THREAD ON X/4')
-os.system('toplev.py --all --quiet --output thread_1_size_4.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 4"')
+#os.system('toplev.py --all --quiet --output thread_1_size_4.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 4"')
 os.system('3>thread_1_size_4_IPC.txt perf stat --log-fd 3 python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 4"')
 
 print('RUNNING 1 THREAD ON X/16')
-os.system('toplev.py --all --quiet --output thread_1_size_16.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 16"')
+#os.system('toplev.py --all --quiet --output thread_1_size_16.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 16"')
 os.system('3>thread_1_size_16_IPC.txt perf stat --log-fd 3 python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 16"')
 
 print('RUNNING 1 THREAD ON X/64')
-os.system('toplev.py --all --quiet --output thread_1_size_64.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 64"')
+#os.system('toplev.py --all --quiet --output thread_1_size_64.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 64"')
 os.system('3>thread_1_size_64_IPC.txt perf stat --log-fd 3 python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 64"')
 
 print('RUNNING 1 THREAD ON X/256')
-os.system('toplev.py --all --quiet --output thread_1_size_256.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 256"')
+#os.system('toplev.py --all --quiet --output thread_1_size_256.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 256"')
 os.system('3>thread_1_size_256_IPC.txt perf stat --log-fd 3 python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 256"')
  
 
 #2 Threads
 print('RUNNING 2 THREAD ON X')
-os.system('toplev.py --all --quiet --output thread_2_size_1.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 1"')
+#os.system('toplev.py --all --quiet --output thread_2_size_1.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 1"')
 os.system('3>thread_2_size_1_IPC.txt perf stat --log-fd 3 python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 1"')
 
 print('RUNNING 2 THREAD ON X/4')
-os.system('toplev.py --all --quiet --output thread_2_size_4.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 4"')
+#os.system('toplev.py --all --quiet --output thread_2_size_4.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 4"')
 os.system('3>thread_2_size_4_IPC.txt perf stat --log-fd 3 python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 4"')
 
 print('RUNNING 2 THREAD ON X/16')
-os.system('toplev.py --all --quiet --output thread_2_size_16.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 16"')
+#os.system('toplev.py --all --quiet --output thread_2_size_16.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 16"')
 os.system('3>thread_2_size_16_IPC.txt perf stat --log-fd 3 python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 16"')
 
 print('RUNNING 2 THREAD ON X/64')
-os.system('toplev.py --all --quiet --output thread_2_size_64.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 64"')
+#os.system('toplev.py --all --quiet --output thread_2_size_64.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 64"')
 os.system('3>thread_2_size_64_IPC.txt perf stat --log-fd 3 python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 64"')
 
 print('RUNNING 2 THREAD ON X/256')
-os.system('toplev.py --all --quiet --output thread_2_size_256.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 256"')
+#os.system('toplev.py --all --quiet --output thread_2_size_256.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 256"')
 os.system('3>thread_2_size_256_IPC.txt perf stat --log-fd 3 python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 256"')
 
 #4 Threads
 
 print('RUNNING 4 THREAD ON X')
-os.system('toplev.py --all --quiet --output thread_4_size_1.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 1"')
+#os.system('toplev.py --all --quiet --output thread_4_size_1.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 1"')
 os.system('3>thread_4_size_1_IPC.txt perf stat --log-fd 3 python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 1"')
 
 print('RUNNING 4 THREAD ON X/4')
-os.system('toplev.py --all --quiet --output thread_4_size_4.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 4"')
+#os.system('toplev.py --all --quiet --output thread_4_size_4.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 4"')
 os.system('3>thread_4_size_4_IPC.txt perf stat --log-fd 3 python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 4"')
 
 print('RUNNING 4 THREAD ON X/16')
-os.system('toplev.py --all --quiet --output thread_4_size_16.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 16"')
+#os.system('toplev.py --all --quiet --output thread_4_size_16.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 16"')
 os.system('3>thread_4_size_16_IPC.txt perf stat --log-fd 3 python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 16"')
 
 print('RUNNING 4 THREAD ON X/64')
-os.system('toplev.py --all --quiet --output thread_4_size_64.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 64"')
+#os.system('toplev.py --all --quiet --output thread_4_size_64.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 64"')
 os.system('3>thread_4_size_64_IPC.txt perf stat --log-fd 3 python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 64"')
 
 print('RUNNING 4 THREAD ON X/256')
-os.system('toplev.py --all --quiet --output thread_4_size_256.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 256"')
+#os.system('toplev.py --all --quiet --output thread_4_size_256.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 256"')
 os.system('3>thread_4_size_256_IPC.txt perf stat --log-fd 3 python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 256"')
 
 #8 Threads
 print('RUNNING 8 THREAD ON X')
-os.system('toplev.py --all --quiet --output thread_8_size_1.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 1"')
+#os.system('toplev.py --all --quiet --output thread_8_size_1.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 1"')
 os.system('3>thread_8_size_1_IPC.txt perf stat --log-fd 3 python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 1"')
 
 print('RUNNING 8 THREAD ON X/4')
-os.system('toplev.py --all --quiet --output thread_8_size_4.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 4"')
+#os.system('toplev.py --all --quiet --output thread_8_size_4.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 4"')
 os.system('3>thread_8_size_4_IPC.txt perf stat --log-fd 3 python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 4"')
 
 print('RUNNING 8 THREAD ON X/16')
-os.system('toplev.py --all --quiet --output thread_8_size_16.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 16"')
+#os.system('toplev.py --all --quiet --output thread_8_size_16.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 16"')
 os.system('3>thread_8_size_16_IPC.txt perf stat --log-fd 3 python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 16"')
 
 print('RUNNING 8 THREAD ON X/64')
-os.system('toplev.py --all --quiet --output thread_8_size_64.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 64"')
+#os.system('toplev.py --all --quiet --output thread_8_size_64.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 64"')
 os.system('3>thread_8_size_64_IPC.txt perf stat --log-fd 3 python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 64"')
 
 print('RUNNING 8 THREAD ON X/256')
-os.system('toplev.py --all --quiet --output thread_8_size_256.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 256"')
+#os.system('toplev.py --all --quiet --output thread_8_size_256.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 256"')
 os.system('3>thread_8_size_256_IPC.txt perf stat --log-fd 3 python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 256"')
 
-
+'''
 #Shrink all output files
 print('Shrinking all output files')
 os.system('python file_shrink.py thread_1_size_1.txt')
@@ -127,6 +127,7 @@ os.system('python file_shrink.py thread_8_size_16.txt')
 os.system('python file_shrink.py thread_8_size_64.txt')
 os.system('python file_shrink.py thread_8_size_256.txt')
 
+'''
 
 
 
