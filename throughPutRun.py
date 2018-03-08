@@ -13,14 +13,10 @@ parser.add_option("-s", "--size", dest="size", default=1,
 threads = int(options.threads)
 sizeFraction = int(options.size)
 
-#print 'threads: ' +str(threads)
-#print 'sizeFraction: '+str(sizeFraction)
-
+print 'size in throughputRun: ' +str(sizeFraction)
 # Load the jpg file into a numpy array
 image = face_recognition.load_image_file("obama_small.jpg")
 
-
-#if(threads == 1):
 
 #10.9 billion
 # ideal: 3.9 billion
@@ -71,18 +67,6 @@ if(sizeFraction == 1):
 	face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
 	face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
 	face_locations = face_recognition.face_locations(image, number_of_times_to_upsample=0, model="cnn")
-'''
 
-if(threads == 2):
-	# Find all facial features in all the faces in the image
-	face_landmarks_list = face_recognition.face_landmarks(image)
-
-if(threads == 4):
-	# Load the jpg file into a numpy array
-	image = face_recognition.load_image_file("obama_small.jpg")
-	# Find all facial features in all the faces in the image
-	face_landmarks_list = face_recognition.face_landmarks(image)
-
-'''
 
 

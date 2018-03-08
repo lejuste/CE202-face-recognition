@@ -28,3 +28,4 @@ os.system('parallel --no-notice :::'+programString)
 
 
 
+print 'Running threads: '+str(threads)

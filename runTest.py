@@ -12,6 +12,40 @@ parser.add_option("-p", "--program", dest="prog",
 tests = int(options.test)
 
 
+
+#Running on Size x/256
+os.system('toplev.py --all --quiet --output thread_1_size_256.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 256"')
+os.system('toplev.py --all --quiet --output thread_2_size_256.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 256"')
+os.system('toplev.py --all --quiet --output thread_4_size_256.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 256"')
+os.system('toplev.py --all --quiet --output thread_8_size_256.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 256"')
+
+
+#Running on size x/64
+os.system('toplev.py --all --quiet --output thread_1_size_64.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 64"')
+os.system('toplev.py --all --quiet --output thread_2_size_64.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 64"')
+os.system('toplev.py --all --quiet --output thread_4_size_64.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 64"')
+os.system('toplev.py --all --quiet --output thread_8_size_64.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 64"')
+
+
+#Running on size x/16
+os.system('toplev.py --all --quiet --output thread_1_size_16.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 16"')
+os.system('toplev.py --all --quiet --output thread_2_size_16.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 1 -s 16"')
+os.system('toplev.py --all --quiet --output thread_4_size_16.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 1 -s 16"')
+os.system('toplev.py --all --quiet --output thread_8_size_16.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 1 -s 16"')
+
+#Running on size x/4
+os.system('toplev.py --all --quiet --output thread_1_size_4.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 4"')
+os.system('toplev.py --all --quiet --output thread_2_size_4.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 4"')
+os.system('toplev.py --all --quiet --output thread_4_size_4.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 4"')
+os.system('toplev.py --all --quiet --output thread_8_size_4.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 4"')
+
+#Running on size x
+os.system('toplev.py --all --quiet --output thread_1_size_1.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 1"')
+os.system('toplev.py --all --quiet --output thread_2_size_1.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 1"')
+os.system('toplev.py --all --quiet --output thread_4_size_1.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 1"')
+os.system('toplev.py --all --quiet --output thread_8_size_1.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 1"')
+
+'''
 #1 Thread
 print('RUNNING 1 THREAD ON X')
 #os.system('toplev.py --all --quiet --output thread_1_size_1.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 1"')
@@ -99,6 +133,8 @@ os.system('3>thread_8_size_64_IPC.txt perf stat --log-fd 3 python runThreads.py 
 print('RUNNING 8 THREAD ON X/256')
 #os.system('toplev.py --all --quiet --output thread_8_size_256.txt python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 256"')
 os.system('3>thread_8_size_256_IPC.txt perf stat --log-fd 3 python runThreads.py -t 8 --program "python throughPutRun.py -t 8 -s 256"')
+
+'''
 
 '''
 #Shrink all output files
