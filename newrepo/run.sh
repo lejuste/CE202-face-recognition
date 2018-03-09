@@ -7,7 +7,7 @@
 
 
 #sudo docker run -e threadCount=1212 -e SIZE=-12  ez1
-
+ls
 
 
 #python runThreads.py -t 1212 --program "python throughPutRun.py -t 1212 -s -12"
@@ -16,8 +16,6 @@
 #run perf on my shit
 
 #run perf on this image with this thread and size -> get a png chart? or just a csv
-
-#then plot that bull shit
 
 #sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
 

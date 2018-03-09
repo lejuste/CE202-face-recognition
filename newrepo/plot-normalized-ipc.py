@@ -47,14 +47,15 @@ for r in rc:
 IPC = []
 for x, y in zip(columns['cpu-cycles'],columns['instructions']):
     if(y==0):
-	IPC.append(0)
+	IPC.append(IPC[-1])
+	#IPC.append(0)
 	continue
     else:
 	value = float(x)/float(y)/float(1000)
         IPC.append(value)
 
 print columns
-plt.plot(timestamps,IPC,'bo-',label='IPC')
+plt.plot(timestamps,IPC,'b-',label='IPC')
 plt.xlabel('Time (seconds)')
 plt.ylabel(args.ylabel)	#plt.ylabel('Instructions per cycle')
 plt.title(str(args.title))	#'Thread 1 IPC'

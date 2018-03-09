@@ -45,7 +45,8 @@ for r in rc:
 IPC = []
 for x, y in zip(columns['branch-misses'],columns['branch-instructions']):
     if(y==0):
-	IPC.append(0)
+	IPC.append(IPC[-1])
+	#IPC.append(0)
 	continue
     else:
         IPC.append(x/y/1000)
