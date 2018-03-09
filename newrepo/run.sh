@@ -28,15 +28,25 @@ sudo perf stat -D 20 -I 100 -e cpu-cycles,instructions -x, -o output.csv sudo do
 python interval-normalize.py output.csv --output newnew.csv
 python plot-normalized.py newnew.csv --title "Thread 2 IPC size x/64" -y "Instructions per cycle"
 
+#FULL L1 MPKI RUN DUDE
+sudo perf stat -D 20 -I 10 -e L1-dcache-load-misses,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+python interval-normalize.py output.csv --output norm.csv
+python plot-normalized-l1.py norm.csv --title "Thread 4 L1 MPKI" -y "L1 Misses per 1000 Instructions" -o T_4_size_64_L1.png
+
+#L2 plot mannn
+sudo perf stat -D 20 -I 10 -e l2_rqsts.miss,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+python interval-normalize.py output.csv --output norm.csv
+python plot-normalized-l2.py norm.csv --title "Thread 4 L2 MPKI" -y "L2 Misses per 1000 Instructions" -o T_4_size_64_L2.png
+
+#L3 plot mannn
+sudo perf stat -D 20 -I 10 -e mem_load_uops_retired.l3_miss,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+python interval-normalize.py output.csv --output norm.csv
+python plot-normalized-l3.py norm.csv --title "Thread 4 L3 MPKI" -y "L3 Misses per 1000 Instructions" -o T_4_size_64_L3.png
+
+#Branch MPKI
+sudo perf stat -D 20 -I 100 -e branch-misses,branch-instructions -x, -o output.csv sudo docker run -e threadCount=2 -e SIZE=1 jusclee/ce-202:firstTry
+python interval-normalize.py output.csv --output norm.csv
+python plot-normalized-branch-miss.py norm.csv --title "Thread 2 Size 1 Branch MPKI" -y "Branch Misses per 1000 Branch Instructions" -o T_2_size_1_branch.png
 
 
-#l1 plot baby
-#sudo perf stat -I 10 -e L1-dcache-load-misses,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
-#python interval-normalize.py output.csv --output norm.csv
-#python plot-normalized.py norm.csv 
 
-
-
-
-
-sudo pmu_tools/ocperf.py stat -I 1000 -d -e cpu-cycles,instructions,branch-misses,l2_rqsts.miss,mem_load_uops_retired.l3_miss -x, -o output.csv python face_classifier/src/throughput.py --divider 64; python pmu_tools/interval-normalize.py output.csv --output norm.csv
