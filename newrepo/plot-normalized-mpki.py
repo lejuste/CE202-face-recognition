@@ -44,26 +44,56 @@ for r in rc:
             columns[j].append(float('nan'))
         c += 1
 
-IPC = []
-for x, y in zip(columns['cpu-cycles'],columns['instructions']):
-    if(y==0):
-	IPC.append(0)
-	continue
+
+l1 = []
+for x, y in zip(columns['L1-dcache-load-misses'],columns['instructions']):
+    if(y==0)or(x==0):
+	l1.append(float('NaN'))
     else:
 	value = float(x)/float(y)/float(1000)
-        IPC.append(value)
+        l1.append(value)
 
-print columns
-plt.plot(timestamps,IPC,'bo-',label='IPC')
+l2 = []
+for x, y in zip(columns['l2_rqsts.miss'],columns['instructions']):
+    if(y==0)or(x==0):
+	l2.append(float('NaN'))
+    else:
+	value = float(x)/float(y)/float(1000)
+        l2.append(value)
+
+l3 = []
+for x, y in zip(columns['mem_load_uops_retired.l3_miss'],columns['instructions']):
+    if(y==0)or(x==0):
+	l3.append(float('NaN'))
+    else:
+	value = float(x)/float(y)/float(1000)
+        l3.append(value)
+
+branchMisses = []
+for x, y in zip(columns['branch-misses'],columns['branch-instructions']):
+    if(y==0)or(x==0):
+	branchMisses.append(float('nan'))
+    else:
+	value = float(x)/float(y)/float(1000)
+        branchMisses.append(value)
+print l1
+print l2
+print l3
+print branchMisses
+
+plt.plot(timestamps,l1,'o-',label='L1')
+plt.plot(timestamps,l2,'o-',label='L2')
+plt.plot(timestamps,l3,'o-',label='L3')
+plt.plot(timestamps,branchMisses,'o-',label='Branch')
+
 plt.xlabel('Time (seconds)')
-plt.ylabel(args.ylabel)	#plt.ylabel('Instructions per cycle')
-plt.title(str(args.title))	#'Thread 1 IPC'
+plt.ylabel(args.ylabel)
+plt.title(str(args.title))
 plt.margins(0.1)
 plt.grid(True)
 leg = plt.legend()
 leg.get_frame().set_alpha(0.5)
-plt.savefig('dude.png')
-
+plt.tight_layout()
 if args.output:
     plt.savefig(args.output)
 else:
