@@ -46,12 +46,13 @@ for r in rc:
 
 IPC = []
 for x, y in zip(columns['cpu-cycles'],columns['instructions']):
-    if(y==0):
-	IPC.append(IPC[-1])
-	#IPC.append(0)
-	continue
+    if(y==0)or (x==0):
+	if not IPC:
+	    IPC.append(0)
+	else:
+	    IPC.append(IPC[-1])
     else:
-	value = float(x)/float(y)/float(1000)
+	value = float(y)/float(x)
         IPC.append(value)
 
 print columns
