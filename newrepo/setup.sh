@@ -28,6 +28,10 @@ git clone https://github.com/lejuste/CE202-face-recognition
 #pull docker image dude
 sudo docker pull jusclee/ce-202:firstTry
 
+#install pip!!!
+sudo apt install python3-pip
+
+
 
 #build image? nah pull it dude
 #sudo docker build -t blah .
