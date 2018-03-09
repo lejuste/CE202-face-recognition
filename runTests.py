@@ -6,9 +6,9 @@ import time
 threads = os.environ.get('threadCount')      #.get() is a safe way to get values from a dictionary if their key might not exist
 size = os.environ.get('SIZE')
 
-print 'threads: '+str(threads)
-print 'size: '+str(size)
+print( "threads: " + str(threads))
+print ('size: '+str(size))
 
 programString = 'python runThreads.py -t '+str(threads)+' --program \"python throughPutRun.py -s '+str(size)+'\"'
-print programString
+print (programString)
 os.system(programString)

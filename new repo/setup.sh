@@ -29,9 +29,6 @@ git clone https://github.com/lejuste/CE202-face-recognition
 sudo docker pull jusclee/ce-202:firstTry
 
 
-#get pmu on board dude.
-
-
 #build image? nah pull it dude
 #sudo docker build -t blah .
 

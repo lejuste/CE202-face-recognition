@@ -13,7 +13,7 @@ parser.add_option("-s", "--size", dest="size", default=1,
 threads = int(options.threads)
 sizeFraction = int(options.size)
 
-print 'size in throughputRun: ' +str(sizeFraction)
+print ('size in throughputRun: ' +str(sizeFraction))
 # Load the jpg file into a numpy array
 image = face_recognition.load_image_file("obama_small.jpg")
 

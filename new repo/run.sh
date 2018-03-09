@@ -21,4 +21,5 @@ sudo docker run -e threadCount=1212 -e SIZE=-12  ez1
 #then plot that bull shit
 
 
+sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
 

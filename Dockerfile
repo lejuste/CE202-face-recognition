@@ -43,6 +43,9 @@ RUN cd ~ && \
 ADD runTests.py /runTests.py
 ADD runThreads.py /runThreads.py
 ADD throughPutRun.py /throughPutRun.py
+ADD obama-480p.jpg /obama-480p.jpg
+ADD obama_small.jpg /obama_small.jpg
+ADD biden.jpg /biden.jpg
 
 # Install any needed packages specified in requirements.txt
 #RUN pip install --trusted-host pypi.python.org -r requirements.txt
