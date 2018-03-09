@@ -21,12 +21,21 @@ sudo docker run -e threadCount=1212 -e SIZE=-12  ez1
 #then plot that bull shit
 
 
-sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+#sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+
+#FULL IPC RUN DUDE
+sudo perf stat -D 20 -I 100 -e cpu-cycles,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+python interval-normalize.py output.csv --output newnew.csv
+python plot-normalized.py newnew.csv --title "Thread 2 IPC size x/64" -y "Instructions per cycle"
+
+
 
 #l1 plot baby
-sudo perf stat -I 10 -e L1-dcache-load-misses,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
-python interval-normalize.py output.csv --output norm.csv
-python plot-normalized.py norm.csv 
+#sudo perf stat -I 10 -e L1-dcache-load-misses,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+#python interval-normalize.py output.csv --output norm.csv
+#python plot-normalized.py norm.csv 
+
+
 
 
 
