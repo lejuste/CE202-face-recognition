@@ -81,11 +81,14 @@ keys = events.keys()
 writer.writerow(["Timestamp"] + (["CPU"] if cpu is not None else []) + keys)
 for row, ts, cpunum in zip(out, times, cpus):
     print('row'+str(row))
-    row1 = [r.replace('<not counted>','0') for r in row]
-    print('row'+str(row1))
+    #row1 = [r.replace('<not counted>','0') for r in row]
+    if('<not counted>' in row):
+        print 'hur'
+        continue
+    #print('row'+str(row1))
     writer.writerow([ts] +
                 ([cpunum] if cpu is not None else []) +
-                ([resolve(row1, events[x]) for x in keys]))
+                ([resolve(row, events[x]) for x in keys]))
 
 
 
