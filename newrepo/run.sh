@@ -7,7 +7,6 @@
 
 
 #sudo docker run -e threadCount=1212 -e SIZE=-12  ez1
-ls
 
 
 #python runThreads.py -t 1212 --program "python throughPutRun.py -t 1212 -s -12"
@@ -18,6 +17,8 @@ ls
 #run perf on this image with this thread and size -> get a png chart? or just a csv
 
 #sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry
+
+
 
 #FULL IPC RUN DUDE
 sudo perf stat -D 20 -I 100 -e cpu-cycles,instructions -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry

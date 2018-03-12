@@ -122,5 +122,6 @@ leg.get_frame().set_alpha(0.5)
 plt.tight_layout()
 if args.output:
     plt.savefig(args.output)
+    #plt.show()
 else:
     plt.show()

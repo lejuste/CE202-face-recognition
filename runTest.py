@@ -12,8 +12,11 @@ parser.add_option("-p", "--program", dest="prog",
 tests = int(options.test)
 
 
-
 #Running on Size x/256
+os.system('sudo perf stat -D 20 -I 10 -e L1-dcache-load-misses,l2_rqsts.miss,branch-misses,branch-instructions,instructions,mem_load_uops_retired.l3_miss,cpu-cycles,LLC-load-misses -x, -o output.csv sudo docker run -e threadCount=4 -e SIZE=64 jusclee/ce-202:firstTry')
+  489  python interval-normalize.py output.csv --output mpki.csv
+  490  python plot-normalized-ipc.py mpki.csv --title "Thread 4 Size x/64 MPKI" --ylabel "Misses per 1000 Instructions"
+
 os.system('toplev.py --all --quiet --output thread_1_size_256.txt python runThreads.py -t 1 --program "python throughPutRun.py -t 1 -s 256"')
 os.system('toplev.py --all --quiet --output thread_2_size_256.txt python runThreads.py -t 2 --program "python throughPutRun.py -t 2 -s 256"')
 os.system('toplev.py --all --quiet --output thread_4_size_256.txt python runThreads.py -t 4 --program "python throughPutRun.py -t 4 -s 256"')
